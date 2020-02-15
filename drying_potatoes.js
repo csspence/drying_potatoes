@@ -3,7 +3,8 @@ All we eat is water and dry matter.
 
 John bought potatoes: their weight is 100 kilograms. Potatoes contain water and dry matter.
 
-The water content is 99 percent of the total weight. He thinks they are too wet and puts them in an oven - at low temperature - for them to lose some water.
+The water content is 99 percent of the total weight. He thinks they are too wet and puts them in an oven - at low temperature - 
+for them to lose some water.
 
 At the output the water content is only 98%.
 
@@ -24,6 +25,11 @@ Example:
 potatoes(99, 100, 98) --> 50
 */
 
-function potatoes(p0, w0, p1) {
-    // your code
+const potatoes = (p0, w0, p1) => {
+    const wetWeight = (w0 / 100) * p0; // 99
+    const dryWeight = w0 - wetWeight; // 1
+    const divideBy = (100 - p1) / 100;
+    finalWeight = Math.trunc(dryWeight / divideBy);
+
+    return finalWeight;
 }
