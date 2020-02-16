@@ -26,10 +26,10 @@ potatoes(99, 100, 98) --> 50
 */
 
 const potatoes = (p0, w0, p1) => {
-    const wetWeight = (w0 / 100) * p0; // 99
-    const dryWeight = w0 - wetWeight; // 1
+    const wetWeight = (w0 / 100) * p0;
+    const dryWeight = Number.parseFloat(w0 - wetWeight).toFixed(2);
     const divideBy = (100 - p1) / 100;
-    finalWeight = Math.trunc(dryWeight / divideBy);
+    const finalWeight = Math.trunc(dryWeight / divideBy);
 
     return finalWeight;
 }
